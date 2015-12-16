@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A025604A1C20EFE60037C136 /* helloworld.c in Sources */ = {isa = PBXBuildFile; fileRef = A02560481C20EFE60037C136 /* helloworld.c */; };
 		A0496F601C111FB600A6630A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0496F5F1C111FB600A6630A /* AppDelegate.swift */; };
 		A0496F621C111FB600A6630A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0496F611C111FB600A6630A /* ViewController.swift */; };
 		A0496F651C111FB600A6630A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0496F631C111FB600A6630A /* Main.storyboard */; };
@@ -40,6 +41,9 @@
 /* Begin PBXFileReference section */
 		11D3AA45BEC83BBB9BA654E0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		66322B157A5B86851C26A373 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A02560471C20EFE60037C136 /* KVODemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KVODemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		A02560481C20EFE60037C136 /* helloworld.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = helloworld.c; sourceTree = "<group>"; };
+		A02560491C20EFE60037C136 /* helloworld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helloworld.h; sourceTree = "<group>"; };
 		A0496F5C1C111FB600A6630A /* KVODemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KVODemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0496F5F1C111FB600A6630A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0496F611C111FB600A6630A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,9 @@
 				A0496F8D1C111FD100A6630A /* DemoDataSource.swift */,
 				A0496F8F1C11780000A6630A /* MyTableViewCell.swift */,
 				A0496F911C11793500A6630A /* MyTableViewDataSource.swift */,
+				A02560481C20EFE60037C136 /* helloworld.c */,
+				A02560491C20EFE60037C136 /* helloworld.h */,
+				A02560471C20EFE60037C136 /* KVODemo-Bridging-Header.h */,
 			);
 			path = KVODemo;
 			sourceTree = "<group>";
@@ -223,7 +230,7 @@
 		A0496F541C111FB500A6630A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = cxria;
 				TargetAttributes = {
@@ -345,6 +352,7 @@
 				A0496F8E1C111FD100A6630A /* DemoDataSource.swift in Sources */,
 				A0496F601C111FB600A6630A /* AppDelegate.swift in Sources */,
 				A0496F921C11793500A6630A /* MyTableViewDataSource.swift in Sources */,
+				A025604A1C20EFE60037C136 /* helloworld.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,10 +495,13 @@
 			baseConfigurationReference = 66322B157A5B86851C26A373 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = KVODemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cxria.KVODemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KVODemo/KVODemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -499,10 +510,12 @@
 			baseConfigurationReference = 11D3AA45BEC83BBB9BA654E0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = KVODemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cxria.KVODemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KVODemo/KVODemo-Bridging-Header.h";
 			};
 			name = Release;
 		};

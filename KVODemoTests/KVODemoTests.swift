@@ -32,5 +32,13 @@ class KVODemoTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    func testAdd(){
+        let b = myadd(2, 3)
+        XCTAssert(b == 5, "yes")
+    }
+    
+    func testPrint(){
+        printMyName()
+    }
     
 }
